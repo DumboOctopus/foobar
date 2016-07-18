@@ -36,7 +36,7 @@ public class Test3Prob3 {
     @Test
     public void test5()
     {
-        String[] words = {"a", "ca", "cb"};
+        String[] words = {"a","ba", "ca", "cb"};
         String answer = Level3Prob3.answer(words);
         assertEquals("abc", answer);
     }

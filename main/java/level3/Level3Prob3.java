@@ -1,7 +1,5 @@
 package level3;
 
-import com.sun.istack.internal.Nullable;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -209,7 +207,7 @@ public class Level3Prob3 {
      * @param other
      * @return the merged alphabet if possible, otherwise null
      */
-    @Nullable
+
     public static String merge2Alphabets(String master, String other)
     {
         for (int i = 0; i < other.length(); i++) {
