@@ -177,15 +177,21 @@ public class Level3Prob3 {
     private static String mergeAlphabets(ArrayList<String> alphabets)
     {
 
-        String currAlphabet = removeLongest(alphabets);
+        String master = removeLongest(alphabets);
 
-        if(alphabets.size() < 1) return currAlphabet; //lets hope all of the cases are like this one :D
+        if(alphabets.size() < 1) return master; //lets hope all of the cases are like this one :D
 
         do{
+            String newMaster = merge2Alphabets(master, alphabets.get(0));
 
+            if(newMaster == null) alphabets.add(alphabets.remove(0));
+            else {
+                alphabets.remove(0);
+                master = newMaster;
+            }
         } while(alphabets.size() > 0);
 
-        return "";
+        return master;
     }
 
     private static String removeLongest(ArrayList<String> alphabets)
@@ -207,24 +213,30 @@ public class Level3Prob3 {
     public static String merge2Alphabets(String master, String other)
     {
         for (int i = 0; i < other.length(); i++) {
-            if(master.contains(other.charAt(i) + ""))
+            int after = lowestIndexAfter(master, other, i);
+            int before = i-1;
+            boolean revisionMode = master.contains(other.charAt(i) + "");
+
+
+            if(before != -1)
             {
-                //revision mode:
-                int before = i-1;
-                if(before != -1)
-                {
+                if(revisionMode) {
                     //check if matches regex
-                    if(!master.matches(other.charAt(before) + ".*" + other.charAt(i)))
-                    {
-                        master = master.replace(other.charAt(i) +"", "");
-                        master = master.replace(other.charAt(before) + "", other.charAt(before)+"" + other.charAt(i));
+                    if (!master.matches(other.charAt(before) + ".*" + other.charAt(i))) {
+                        master = master.replace(other.charAt(i) + "", "");
+                        master = master.replace(other.charAt(before) + "", other.charAt(before) + "" + other.charAt(i));
                     }
                     continue;
-                }
-
-                int after = lowestIndexAfter(master, other, i);
-                if(after != -1)
+                } else
                 {
+                    master = master.replace(other.charAt(before) + "", other.charAt(before) + "" + other.charAt(i));
+                    continue;
+                }
+            }
+
+            if(after != -1)
+            {
+                if(revisionMode) {
                     //check if matches regex
                     if(!master.matches(other.charAt(i) + ".*" + other.charAt(after)))
                     {
@@ -232,10 +244,15 @@ public class Level3Prob3 {
                         master = master.replace(other.charAt(after) + "", "" + other.charAt(i) + other.charAt(after));
                     }
                     continue;
+                } else
+                {
+                    master = master.replace(other.charAt(after) + "", "" + other.charAt(i) + other.charAt(after));
+                    continue;
                 }
-
-                return null;
             }
+
+            return null;
+
         }
         return master;
     }
