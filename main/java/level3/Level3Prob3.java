@@ -172,7 +172,7 @@ public class Level3Prob3 {
      * @param alphabets
      * @return
      */
-    private static String mergeAlphabets(ArrayList<String> alphabets)
+    public static String mergeAlphabets(ArrayList<String> alphabets)
     {
 
         String master = removeLongest(alphabets);
@@ -210,6 +210,7 @@ public class Level3Prob3 {
 
     public static String merge2Alphabets(String master, String other)
     {
+        if(alphabetsMatch(master, other)) return master;
         for (int i = 0; i < other.length(); i++) {
             int after = lowestIndexAfter(master, other, i);
             int before = i-1;
@@ -220,7 +221,7 @@ public class Level3Prob3 {
             {
                 if(revisionMode) {
                     //check if matches regex
-                    if (!master.matches(other.charAt(before) + ".*" + other.charAt(i))) {
+                    if (!master.matches(".*" + other.charAt(before) + ".*" + other.charAt(i) +".*" )) {
                         master = master.replace(other.charAt(i) + "", "");
                         master = master.replace(other.charAt(before) + "", other.charAt(before) + "" + other.charAt(i));
                     }
@@ -236,7 +237,7 @@ public class Level3Prob3 {
             {
                 if(revisionMode) {
                     //check if matches regex
-                    if(!master.matches(other.charAt(i) + ".*" + other.charAt(after)))
+                    if(!master.matches(".*"+other.charAt(i) + ".*" + other.charAt(after) + ".*"))
                     {
                         master = master.replace(other.charAt(i) +"", "");
                         master = master.replace(other.charAt(after) + "", "" + other.charAt(i) + other.charAt(after));
@@ -254,6 +255,18 @@ public class Level3Prob3 {
         }
         return master;
     }
+
+    private static boolean alphabetsMatch(String master, String other)
+    {
+        int currIndexOfOther = 0;
+
+        for (int i = 0; i < master.length(); i++) {
+            if(currIndexOfOther >= other.length()) return true;
+            if(master.charAt(i) == other.charAt(currIndexOfOther)) currIndexOfOther++;
+        }
+        return false;
+    }
+
 
     private static int lowestIndexAfter(String master, String other, int middleInd)
     {
