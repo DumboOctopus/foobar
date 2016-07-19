@@ -95,11 +95,11 @@ public class Level3Prob3 {
 //    }
 
 
-    public static String answer(String[] words) throws Exception
+    public static String answer(String[] words)
     {
         ArrayList<String> alphabets = new ArrayList<>();
         generateAllAlphabets(words, alphabets);
-        return mergeAlphabets(alphabets);
+        return eliminateCombine(alphabets);
     }
 
     /**
@@ -137,7 +137,8 @@ public class Level3Prob3 {
 
         startNextAlphabet(allAlphabets, nextLevelAlphabet);
 
-        allAlphabets.add(currLevelAlphabet);
+        if(currLevelAlphabet.length() > 1)
+            allAlphabets.add(currLevelAlphabet);
 
         //this makes me so happy that its so nicely refactored from what it used to be :D
     }
@@ -150,140 +151,43 @@ public class Level3Prob3 {
         }
     }
 
-
-    /**
-     *TODO
-     *
-     * does the character exist in alphabet? y = revision mode, n = addition mode
-     *
-     * Addition mode:
-     *  if there is a character before it which exists in alphabet, add it after that character.
-     *  if there is a character after it that exists in the alphabet, add it before that character
-     *  if neither is possible, throw this alphabet at the end of the queue.
-     *
-     * Revision mode:
-     * does the currentAlphabet match( "beforeWhichInMaster.+char")?
-     *  if not, move char right after before. Since all alphabets are true, this wont destroy previous alphabets orderings, just revise it.
-     * does the currentAlphabet match( "char.+afterWhichInMaster")?
-     *  if not move char right before after.
-     nvm there is no revision mode. IF ALL ALPHBETS are correct, how can 2 have discrpency unless they do it after inserting?
-     *
-     *
-     * @param alphabets
-     * @return
-     */
-    private static String mergeAlphabets(ArrayList<String> alphabets) throws Exception
-    {
-        int offset = 0;
-        ArrayList<String> trollList = new ArrayList<>();
-        String master = removeLongest(alphabets);
-
-        if(alphabets.size() < 1) return master; //lets hope all of the cases are like this one :D
+    private static String eliminateCombine(ArrayList<String> alphabets) {
+        String out = "";
 
         do{
-            String newMaster = merge2Alphabets(master, alphabets.get(0));
+            char first = getFirstInAlphabet(alphabets);
+            out += first;
 
-            if(newMaster == null){
-                trollList.add(alphabets.remove(0));
-            }
-            else {
-                alphabets.remove(0);
-                master = newMaster;
-            }
-        } while(alphabets.size() > offset);
+            removeFirst(alphabets, first);
 
-        for(String str: trollList){
-            String newMaster = merge2Alphabets(master, str);
-
-            if(newMaster != null){
-                master = newMaster;
-            }
-        }
-
-        return master;
+        } while(alphabets.size() > 0);
+        return out;
     }
 
-    private static String removeLongest(ArrayList<String> alphabets)
-    {
-        int index = 0;
-        for (int i = 1; i < alphabets.size(); i++) {
-            if (alphabets.get(i).length() > alphabets.get(index).length()) index =i;
-        }
-        return alphabets.remove(index);
-    }
-
-    /**
-     *
-     * @param master
-     * @param other
-     * @return the merged alphabet if possible, otherwise null
-     */
-
-    public static String merge2Alphabets(String master, String other)
-    {
-        if(alphabetsMatch(master, other)) return master;
-        for (int i = 0; i < other.length(); i++) {
-            int after = lowestIndexAfter(master, other, i);
-            int before = i-1;
-            boolean revisionMode = master.contains(other.charAt(i) + "");
-
-
-            if(before != -1)
+    private static void removeFirst(ArrayList<String> alphabets, char first) {
+        for (int i = alphabets.size() - 1; i >= 0; i--) {
+            String prcs = alphabets.get(i);
+            prcs = prcs.replaceFirst("" + first, "");
+            if(prcs.length() < 1)
             {
-                if(revisionMode) {
-                    //check if matches regex
-                    if (!master.matches(".*" + other.charAt(before) + ".*" + other.charAt(i) +".*" )) {
-                        master = master.replace(other.charAt(i) + "", "");
-                        master = master.replace(other.charAt(before) + "", other.charAt(before) + "" + other.charAt(i));
-                    }
-                    continue;
-                } else
-                {
-                    master = master.replace(other.charAt(before) + "", other.charAt(before) + "" + other.charAt(i));
-                    continue;
-                }
-            }
-
-            if(after != -1)
+                alphabets.remove(i);
+            } else
             {
-                if(revisionMode) {
-                    //check if matches regex
-                    if(!master.matches(".*"+other.charAt(i) + ".*" + other.charAt(after) + ".*"))
-                    {
-                        master = master.replace(other.charAt(i) +"", "");
-                        master = master.replace(other.charAt(after) + "", "" + other.charAt(i) + other.charAt(after));
-                    }
-                    continue;
-                } else
-                {
-                    master = master.replace(other.charAt(after) + "", "" + other.charAt(i) + other.charAt(after));
-                    continue;
-                }
+                alphabets.set(i, prcs);
             }
-
-            return null;
-
         }
-        return master;
     }
 
-    private static boolean alphabetsMatch(String master, String other)
-    {
-        int currIndexOfOther = 0;
+    private static char getFirstInAlphabet(ArrayList<String> alphabets) {
+        char first = alphabets.get(0).charAt(0);
 
-        for (int i = 0; i < master.length(); i++) {
-            if(currIndexOfOther >= other.length()) return true;
-            if(master.charAt(i) == other.charAt(currIndexOfOther)) currIndexOfOther++;
+        for(String alphabet: alphabets)
+        {
+            if(alphabet.indexOf(first) > 0) first = alphabet.charAt(0);
         }
-        return false;
+
+        return first;
     }
 
 
-    private static int lowestIndexAfter(String master, String other, int middleInd)
-    {
-        for (int i = middleInd + 1; i < other.length(); i++) {
-            if(master.contains(other.charAt(i) + "")) return i;
-        }
-        return -1;
-    }
 }

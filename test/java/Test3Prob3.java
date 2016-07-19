@@ -66,7 +66,7 @@ public class Test3Prob3 {
     @Test
     public void test5()
     {
-        String[] words = {"acc","acd", "ace", "aenemic", "all", "bell", "bla", "ble", "lal", "lc" ,"lee" };
+        String[] words = {"acc","acd", "ace", "aenemic", "all", "bell", "bla", "ble", "cal", "lal", "lc" ,"lee" };
         String answer = Level3Prob3.answer(words);
         assertEquals("abcdel", answer);
     }
@@ -86,7 +86,6 @@ public class Test3Prob3 {
     @Test
     public void testGenerateAllAlphabets2()
     {
-        new Exception();
         long startTime = System.currentTimeMillis();
         String[] words = {"ae", "ac", "ce", "ca"};
         ArrayList<String> alphabets = new ArrayList<>();
@@ -97,21 +96,35 @@ public class Test3Prob3 {
         assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
     }
 
-    @Test
-    public void testMerge1()
-    {
-        String[] alphabets = new String[]{"eca", "ac"};
-        String answer = Level3Prob3.merge2Alphabets(alphabets[0], alphabets[1]);
-        assertEquals("eac", answer);
-    }
+//    @Test
+//    public void testGenerateAllAlphabets3()
+//    {
+//        long startTime = System.currentTimeMillis();
+//        //ae,
+//        String[] words = {"animate", "animenic", "ca", "ce"};
+//        ArrayList<String> alphabets = new ArrayList<>();
+//        Level3Prob3.generateAllAlphabets(words, alphabets);
+//        System.out.println(System.currentTimeMillis() - startTime);
+//        String[] actual = new String[alphabets.size()]; alphabets.toArray(actual);
+//        System.out.println( Arrays.toString(actual));
+//        assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
+//    }
 
-    @Test
-    public void testMerge2()
-    {
-        ArrayList<String> alphabets = new ArrayList<>();
-        alphabets.add("eca"); alphabets.add( "bd"); alphabets.add( "de");
-        String answer = Level3Prob3.mergeAlphabets(alphabets);
-        assertEquals("bdeca", answer);
-    }
+//    @Test
+//    public void testMerge1()
+//    {
+//        String[] alphabets = new String[]{"eca", "ac"};
+//        String answer = Level3Prob3.merge2Alphabets(alphabets[0], alphabets[1]);
+//        assertEquals("eac", answer);
+//    }
+//
+//    @Test
+//    public void testMerge2()
+//    {
+//        ArrayList<String> alphabets = new ArrayList<>();
+//        alphabets.add("eca"); alphabets.add( "bd"); alphabets.add( "de");
+//        String answer = Level3Prob3.mergeAlphabets(alphabets);
+//        assertEquals("bdeca", answer);
+//    }
 
 }
