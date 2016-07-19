@@ -1,6 +1,4 @@
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.deploy.util.SystemUtils;
-import level3.Level3Prob2;
+
 import level3.Level3Prob3;
 import org.junit.Test;
 
@@ -34,7 +32,7 @@ public class Test3Prob3 {
 
 
     @Test
-    public void test5()
+    public void test1()
     {
         String[] words = {"a","ba", "ca", "cb"};
         String answer = Level3Prob3.answer(words);
@@ -42,12 +40,38 @@ public class Test3Prob3 {
     }
 
     @Test
-    public void test6()
+    public void test2()
     {
         String[] words = {"ae", "ac", "ce", "ca"};
         String answer = Level3Prob3.answer(words);
         assertEquals("eac", answer);
     }
+
+    @Test
+    public void test3()
+    {
+        String[] words = {"able", "bell", "bla", "ble", "eebee" ,"lee"};
+        String answer = Level3Prob3.answer(words);
+        assertEquals("abel", answer);
+    }
+
+    @Test
+    public void test4()
+    {
+        String[] words = {"able","ae", "alaaaa", "bell", "bla", "ble", "lal" ,"lee"};
+        String answer = Level3Prob3.answer(words);
+        assertEquals("abel", answer);
+    }
+
+    @Test
+    public void test5()
+    {
+        String[] words = {"acc","acd", "ace", "aenemic", "all", "bell", "bla", "ble", "lal", "lc" ,"lee" };
+        String answer = Level3Prob3.answer(words);
+        assertEquals("abcdel", answer);
+    }
+
+
 
     @Test
     public void testGenerateAllAlphabets()
@@ -62,6 +86,7 @@ public class Test3Prob3 {
     @Test
     public void testGenerateAllAlphabets2()
     {
+        new Exception();
         long startTime = System.currentTimeMillis();
         String[] words = {"ae", "ac", "ce", "ca"};
         ArrayList<String> alphabets = new ArrayList<>();
@@ -79,4 +104,14 @@ public class Test3Prob3 {
         String answer = Level3Prob3.merge2Alphabets(alphabets[0], alphabets[1]);
         assertEquals("eac", answer);
     }
+
+    @Test
+    public void testMerge2()
+    {
+        ArrayList<String> alphabets = new ArrayList<>();
+        alphabets.add("eca"); alphabets.add( "bd"); alphabets.add( "de");
+        String answer = Level3Prob3.mergeAlphabets(alphabets);
+        assertEquals("bdeca", answer);
+    }
+
 }
