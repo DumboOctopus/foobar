@@ -95,7 +95,7 @@ public class Level3Prob3 {
 //    }
 
 
-    public static String answer(String[] words)
+    public static String answer(String[] words) throws Exception
     {
         ArrayList<String> alphabets = new ArrayList<>();
         generateAllAlphabets(words, alphabets);
@@ -172,9 +172,10 @@ public class Level3Prob3 {
      * @param alphabets
      * @return
      */
-    public static String mergeAlphabets(ArrayList<String> alphabets)
+    private static String mergeAlphabets(ArrayList<String> alphabets) throws Exception
     {
-
+        int offset = 0;
+        ArrayList<String> trollList = new ArrayList<>();
         String master = removeLongest(alphabets);
 
         if(alphabets.size() < 1) return master; //lets hope all of the cases are like this one :D
@@ -182,12 +183,22 @@ public class Level3Prob3 {
         do{
             String newMaster = merge2Alphabets(master, alphabets.get(0));
 
-            if(newMaster == null) alphabets.add(alphabets.remove(0));
+            if(newMaster == null){
+                trollList.add(alphabets.remove(0));
+            }
             else {
                 alphabets.remove(0);
                 master = newMaster;
             }
-        } while(alphabets.size() > 0);
+        } while(alphabets.size() > offset);
+
+        for(String str: trollList){
+            String newMaster = merge2Alphabets(master, str);
+
+            if(newMaster != null){
+                master = newMaster;
+            }
+        }
 
         return master;
     }
@@ -275,5 +286,4 @@ public class Level3Prob3 {
         }
         return -1;
     }
-
 }
