@@ -1,8 +1,11 @@
 package level3;
 
+import java.time.DateTimeException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.prefs.BackingStoreException;
+import java.util.zip.DataFormatException;
 
 /**
  * Created by neilprajapati on 7/16/16.
@@ -93,7 +96,12 @@ public class Level3Prob3 {
 //            lists.add(prcsed);
 //        commons.clear();
 //    }
+    private static int pn = 0;
 
+    /*
+    Test case 4:
+        [uo, ur, uurkoovr, uuz, uuay, uukb, uuj, uugvgcac, uuebl, uueyq, uif, ukm, ufu, ujqgovwb, ujosbhkw, ujuuaatt, ujuumtzn, ujui, ujul, ujzxjzt
+     */
 
     public static String answer(String[] words)
     {
@@ -151,7 +159,7 @@ public class Level3Prob3 {
         }
     }
 
-    private static String eliminateCombine(ArrayList<String> alphabets) {
+    public static String eliminateCombine(ArrayList<String> alphabets) {
         String out = "";
 
         do{
@@ -167,8 +175,8 @@ public class Level3Prob3 {
     private static void removeFirst(ArrayList<String> alphabets, char first) {
         for (int i = alphabets.size() - 1; i >= 0; i--) {
             String prcs = alphabets.get(i);
-            prcs = prcs.replaceFirst("" + first, "");
-            if(prcs.length() < 1)
+            prcs = prcs.replace("" + first, "");
+            if(prcs.length() == 0)
             {
                 alphabets.remove(i);
             } else

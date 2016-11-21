@@ -1,9 +1,11 @@
 
 import level3.Level3Prob3;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -28,6 +30,14 @@ public class Test3Prob3 {
         String[] words = {"y", "z", "xy"};
         String answer = Level3Prob3.answer(words);
         assertEquals("yzx", answer);
+    }
+
+    @Test
+    public void foobarOfficalTest3()
+    {
+        String[] words = {"z", "yx", "yz"};
+        String answer = Level3Prob3.answer(words);
+        assertEquals("xzy", answer);
     }
 
 
@@ -72,7 +82,7 @@ public class Test3Prob3 {
     }
 
 
-
+    @Ignore
     @Test
     public void testGenerateAllAlphabets()
     {
@@ -83,6 +93,7 @@ public class Test3Prob3 {
         assertArrayEquals(new String[]{"bac"}, actual);
     }
 
+    @Ignore
     @Test
     public void testGenerateAllAlphabets2()
     {
@@ -96,20 +107,46 @@ public class Test3Prob3 {
         assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
     }
 
-//    @Test
-//    public void testGenerateAllAlphabets3()
-//    {
-//        long startTime = System.currentTimeMillis();
-//        //ae,
-//        String[] words = {"animate", "animenic", "ca", "ce"};
-//        ArrayList<String> alphabets = new ArrayList<>();
-//        Level3Prob3.generateAllAlphabets(words, alphabets);
-//        System.out.println(System.currentTimeMillis() - startTime);
-//        String[] actual = new String[alphabets.size()]; alphabets.toArray(actual);
-//        System.out.println( Arrays.toString(actual));
-//        assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
-//    }
+    @Ignore
+    @Test
+    public void testGenerateAllAlphabets3()
+    {
+        long startTime = System.currentTimeMillis();
+        //ae,
+        String[] words = {"eca", "ecca", "ca", "ce"};
+        ArrayList<String> alphabets = new ArrayList<>();
+        Level3Prob3.generateAllAlphabets(words, alphabets);
+        System.out.println(System.currentTimeMillis() - startTime);
+        String[] actual = new String[alphabets.size()]; alphabets.toArray(actual);
+        System.out.println( Arrays.toString(actual));
+        assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
+    }
 
+    @Ignore
+    @Test
+    public void testGenerateAllAlphabets4()
+    {
+        long startTime = System.currentTimeMillis();
+        //ae,
+        String[] words = {"uo", "ur", "uurkoovr", "uuz", "uuay", "uukb", "uuj", "uugvgcac", "uuebl", "uueyq", "uif", "ukm", "ufu", "ujqgovwb", "ujosbhkw", "ujuuaat", "ujuumtzn", "ujui", "ujul", "ujzxjzt"};
+        ArrayList<String> alphabets = new ArrayList<>();
+        Level3Prob3.generateAllAlphabets(words, alphabets);
+        System.out.println(System.currentTimeMillis() - startTime);
+        String[] actual = new String[alphabets.size()]; alphabets.toArray(actual);
+        System.out.println( Arrays.toString(actual));
+        assertArrayEquals(new String[]{"ec", "ea", "ac"}, actual);
+    }
+
+
+    @Test
+    public void elimMerge()
+    {
+        String[] words = {"zbd", "zab", "abc", "cd", "za"};
+        ArrayList<String> alpha = new ArrayList<>();
+        Collections.addAll(alpha, words);
+        String out = Level3Prob3.eliminateCombine(alpha);
+        System.out.println(out);
+    }
 //    @Test
 //    public void testMerge1()
 //    {
