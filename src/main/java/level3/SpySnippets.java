@@ -21,9 +21,12 @@ import java.util.HashMap;
  *
  */
 public class SpySnippets {
+    /**
+     * Represents a located search term.
+     */
     public static class Node{
         private final int index;
-        private final int searchTerm;//maybe replace this latr
+        private final int searchTerm;
 
         public Node(int index, int searchTerm)
         {
@@ -75,17 +78,36 @@ public class SpySnippets {
 
         }
 
+        /**
+         * Because foobar tests by calling a static method, all the variables are
+         * still in their previous state. Thus we must reset them before doing any calculations
+         * to avoid interference from previous executions.
+         */
         public static void reset()
         {
             instancesCount = new HashMap<>();
             rarestSearchTerm = 0;
         }
 
+        /**
+         * The distance between Nodes in the document as measured by words. (x words between = x distance)
+         * @param n1 first node
+         * @param n2 second node
+         * @return distance
+         */
         public static int nodeDistance(Node n1, Node n2)
         {
             return Math.abs(n1.index - n2.index);
         }
     }
+
+    /**
+     * Using document, it searches for
+     * the smallest complete combination of searchTerms.
+     * @param document the document to scan for search words containing strings.
+     * @param searchTerms terms which the output must contain
+     * @return the smallest (by words) String which contains all searchTerms
+     */
     public static String answer(String document, String[] searchTerms) {
         Node.reset(); //LOOOL i put this in the wrong spot when I sumbitted it :( buts its okies
         Node[] nodes = createNodes(document, searchTerms);
@@ -99,8 +121,10 @@ public class SpySnippets {
     /**
      * Using rarest Nodes as starting points, it searches for
      * the smallest complete combination of searchTerms.
-     * @param searchTerms
-     * @param nodes
+     * @param searchTerms the terms which have to be included in output
+     * @param nodes the index of each search term represented by <code>Node[]</code>
+     * @return the 0th index contains the starting node of the smallest sequence including
+     * all search termsn and the 1st index contains the ending node.
      */
     public static Node[] rarietyBasedSearch(String[] searchTerms, Node[] nodes) {
         Node smallestStartNode = null;
@@ -119,7 +143,7 @@ public class SpySnippets {
                 //VERY IMPORTANT, we found the rarest
                 termsFound[nodes[firstFullEnd].searchTerm] = true;
 
-                while(!foundAllTerms && firstFull >= -1) //
+                while(!foundAllTerms && firstFull >= 0) //
                 {
                     firstFull--;
                     if(firstFull < 0){
@@ -152,7 +176,7 @@ public class SpySnippets {
                 }
 
                 //calculate if its the best...
-                //only less than such that it favours the FIRST SMALLEST :D WOW IM SO SMART TO HAVE ACCIDENTELY DONE THAT :D
+                //only less than such that it favours the FIRST SMALLEST :D
                 if(smallestStartNode == null || Node.nodeDistance(nodes[firstFull], nodes[firstFullEnd]) < Node.nodeDistance(smallestStartNode, smallestEndNode))
                 {
                     smallestStartNode = nodes[firstFull];
@@ -197,19 +221,13 @@ public class SpySnippets {
         return new Node[]{smallestStartNode, smallestEndNode};
     }
 
-    public static void printHashMap()
-    {
-        for (Integer name: Node.instancesCount.keySet()){
 
-            String key =name.toString();
-            String value = Node.instancesCount.get(name).toString();
-            System.out.println(key + " " + value);
-
-
-        }
-    }
-
-
+    /**
+     * Used to find the text between 2 nodes inclusively
+     * @param document
+     * @param nodes
+     * @return text between the 2 nodes (inclusive)
+     */
     public static String textBetweenNodes(String document, Node[] nodes)
     {
         String[] words = document.split("\\s");
@@ -222,6 +240,12 @@ public class SpySnippets {
         return out;
     }
 
+    /**
+     * Given a document, it finds each search term and creates Nodes for them
+     * @param document the document
+     * @param searchTerms the serach terms to index
+     * @return node array where each node is a search terms
+     */
     public static Node[] createNodes(String document, String[] searchTerms)
     {
         ArrayList<Node> nodes = new ArrayList<>();
