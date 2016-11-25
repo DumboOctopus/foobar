@@ -1,6 +1,7 @@
 package level4;
 
 import java.lang.reflect.Array;
+import java.nio.channels.Pipe;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,6 +12,8 @@ import java.util.Set;
  * neilprajapati, dont forget to javaDoc this file.
  */
 public class BruteMinion {
+    public static boolean showWork = false;
+
     public static void main(String[] args) {
         System.out.println( bruteRRLL(8, 5));
     }
@@ -100,6 +103,7 @@ public class BruteMinion {
             String stub = string.replaceAll("S", "");
             if(stub.charAt(0) != 'L' && stub.charAt(stub.length() - 1) != 'L'&& stub.charAt(stub.length() - 2) != 'L') {
                 count ++;
+                if(showWork) System.out.println(string);
             }
         }
         return count;
@@ -128,12 +132,27 @@ public class BruteMinion {
 
 
         int count = 0;
+        int degen=0, degenBtwn2 = 0 , degenAll = 0;
         for(String string: all) {
             if(string.charAt(0) != 'L' && string.charAt(string.length() - 1) != 'L'&& string.charAt(string.length() - 2) != 'L') {
                 count ++;
-                System.out.println(string);
+                if(showWork)
+                    System.out.println(string);
+            } else
+            {
+                degen++;
             }
+
+
+            if(string.charAt(0) == 'L' && string.charAt(string.length() - 2)== 'L') degenBtwn2 += 3;
+            if(string.charAt(0) == 'L' && string.charAt(string.length() - 1) == 'L' && string.charAt(string.length() - 2)== 'L')
+                degenAll ++;
+
         }
+
+        System.out.println("degen = " + degen);
+        System.out.println("degenBtwn2 = " + degenBtwn2);
+        System.out.println("degenAll = " + degenAll);
         return count;
     }
 }

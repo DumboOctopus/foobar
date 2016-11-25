@@ -148,7 +148,7 @@ public class Test3Prob3 {
         String out = Level3Prob3.eliminateCombine(alpha);
         System.out.println(out);
     }
-//    @level3.BruteMinion
+//    @level4.BruteMinion
 //    public void testMerge1()
 //    {
 //        String[] alphabets = new String[]{"eca", "ac"};
@@ -156,7 +156,7 @@ public class Test3Prob3 {
 //        assertEquals("eac", answer);
 //    }
 //
-//    @level3.BruteMinion
+//    @level4.BruteMinion
 //    public void testMerge2()
 //    {
 //        ArrayList<String> alphabets = new ArrayList<>();

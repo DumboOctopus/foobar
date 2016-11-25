@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e497d36-04c4-4aef-af87-db9301d927bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/Google FOOOBAR/SpySnippetsTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/Google FOOOBAR/Test3Prob3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/Google FOOOBAR/Testl3p2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/SpySnippets$Node.class" afterPath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/SpySnippets$Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/SpySnippets.class" afterPath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/SpySnippets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/level3/SpySnippets.java" afterPath="$PROJECT_DIR$/src/main/java/level3/SpySnippets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" afterPath="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java" afterPath="$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" afterPath="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" afterPath="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" />
     </list>
     <ignored path="Google FOOOBAR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,6 +25,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Google FOOOBAR$MinionBoredGameTest_testrrllShll6.coverage" NAME="MinionBoredGameTest.testrrllShll6 Coverage Results" MODIFIED="1480099176118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>level4.MinionBoredGameTest</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Google FOOOBAR$MinionBoredGameTest.coverage" NAME="MinionBoredGameTest Coverage Results" MODIFIED="1480103003246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>level3.MinionBoredGame</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -26,22 +42,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="MinionBoredGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+            <state relative-caret-position="216">
+              <caret line="174" column="48" selection-start-line="174" selection-start-column="48" selection-end-line="174" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpySnippets.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/level3/SpySnippets.java">
+      <file leaf-file-name="MinionBoredGameTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="199">
+              <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BruteMinion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#1545#1553#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +117,21 @@
         <option value="$PROJECT_DIR$/src/test/java/SpySnippetsTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/level3/SpySnippets.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BruteMinion.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MinionBoredGameTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level3/MinionBoredGameTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -116,7 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,6 +217,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google FOOOBAR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google Foobar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google FOOOBAR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google Foobar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -199,38 +301,45 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="last.edited.regexp" value="missingVlaue" />
+    <property name="last.edited.regexp" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="level3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpySnippetsTest">
-    <configuration default="false" name="Test3Prob3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+  <component name="RunManager" selected="JUnit.MinionBoredGameTest">
+    <configuration default="false" name="MinionBoredGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level3.MinionBoredGame" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Google FOOOBAR" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test3Prob3" />
-      <option name="METHOD_NAME" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -240,35 +349,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SpySnippetsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="MinionBoredGameTest.testrrllShell6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Google FOOOBAR" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpySnippetsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SpySnippetsTest.testIndexing2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Google FOOOBAR" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpySnippetsTest" />
-      <option name="METHOD_NAME" value="testIndexing2" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="testrrllShell6" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -282,14 +375,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SpySnippetsTest.testIndexing1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="MinionBoredGameTest.testrrllShell7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Google FOOOBAR" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpySnippetsTest" />
-      <option name="METHOD_NAME" value="testIndexing1" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="testrrllShell7" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -303,14 +401,45 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SpySnippetsTest.testAnswer1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="MinionBoredGameTest.testrrllShellMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Google FOOOBAR" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpySnippetsTest" />
-      <option name="METHOD_NAME" value="testAnswer1" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="testrrllShellMany" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MinionBoredGameTest.testrrllShell8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Google FOOOBAR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="testrrllShell8" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -367,6 +496,9 @@
       <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="AntRunConfiguration" factoryName="Ant Target">
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -390,6 +522,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -404,6 +539,24 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -482,6 +635,15 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="K2JSConfigurationType" factoryName="Kotlin (JavaScript - experimental)">
+      <K2JSConfigurationSettings>
+        <option name="browserFamily" value="Chrome" />
+        <option name="generatedFilePath" value="$PROJECT_DIR$" />
+        <option name="pageToOpenFilePath" value="" />
+        <option name="shouldOpenInBrowserAfterTranslation" value="false" />
+      </K2JSConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
@@ -492,6 +654,28 @@
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -558,6 +742,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
     <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
       <setting name="environment" value="" />
       <setting name="specsToExecute" value="" />
@@ -571,20 +771,47 @@
       <setting name="rowsRange" value="" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.Test3Prob3" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testIndexing2" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testIndexing1" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testAnswer1" />
+    <configuration default="false" name="MinionBoredGameTest.testrrllShll6" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" track_test_folders="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="level4.MinionBoredGameTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Google FOOOBAR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="level4" />
+      <option name="MAIN_CLASS_NAME" value="level4.MinionBoredGameTest" />
+      <option name="METHOD_NAME" value="testrrllShll6" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShll6" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell6" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell7" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShellMany" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell8" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testAnswer1" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testIndexing2" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SpySnippetsTest.testIndexing1" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Test3Prob3" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell8" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShellMany" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell7" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllShell6" />
       </list>
     </recent_temporary>
   </component>
@@ -683,35 +910,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpySnippetsTest - 2016.11.20 at 22h 18m 09s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest - 2016.11.25 at 13h 02m 22s.xml">
+      <configuration name="MinionBoredGameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest - 2016.11.20 at 22h 18m 57s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest - 2016.11.25 at 13h 04m 37s.xml">
+      <configuration name="MinionBoredGameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest - 2016.11.20 at 22h 24m 52s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 45m 24s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest - 2016.11.20 at 22h 30m 22s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 47m 36s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest - 2016.11.20 at 22h 31m 30s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 48m 37s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest - 2016.11.21 at 11h 00m 08s.xml">
-      <configuration name="SpySnippetsTest" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 48m 59s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest_testAnswer1 - 2016.11.20 at 22h 25m 36s.xml">
-      <configuration name="SpySnippetsTest.testAnswer1" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 50m 12s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest_testAnswer1 - 2016.11.20 at 22h 28m 50s.xml">
-      <configuration name="SpySnippetsTest.testAnswer1" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 51m 58s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest_testAnswer1 - 2016.11.20 at 22h 29m 24s.xml">
-      <configuration name="SpySnippetsTest.testAnswer1" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 53m 05s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpySnippetsTest_testAnswer1 - 2016.11.20 at 22h 30m 16s.xml">
-      <configuration name="SpySnippetsTest.testAnswer1" configurationId="JUnit" />
+    <history-entry file="MinionBoredGameTest_testrrllShell8 - 2016.11.25 at 12h 54m 40s.xml">
+      <configuration name="MinionBoredGameTest.testrrllShell8" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -735,11 +962,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.50472915" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.49699053" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3241491" sideWeight="0.49527085" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.49527085" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24935512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -750,7 +979,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -782,11 +1010,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="nodes[2].isRarest()" language="JAVA" custom="" />
+        <watch expression="permWithRepeats(t-1, l-1, r, 0)*3" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -795,30 +1043,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="143" column="37" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5865">
@@ -908,7 +1132,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -989,7 +1213,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
@@ -1013,7 +1237,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
@@ -1021,7 +1245,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
@@ -1044,7 +1268,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
@@ -1052,7 +1276,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
@@ -1075,7 +1299,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
@@ -1083,7 +1307,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
@@ -1106,7 +1330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
@@ -1114,7 +1338,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
@@ -1129,7 +1353,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
@@ -1144,7 +1368,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
@@ -1162,23 +1386,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Testl3p2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/level3/Happy.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/level3/Happy.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1250,22 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test3Prob3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="178" column="28" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1278,7 +1471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,14 +1485,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding>
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#5891#6026#0" expanded="true" />
-            <element signature="e#6025#6026#0" expanded="true" />
-            <element signature="e#6429#6593#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/level3/SpySnippets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="246" column="46" selection-start-line="246" selection-start-column="46" selection-end-line="246" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="178" column="28" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Testl3p2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/SpySnippetsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/level3/Test3Prob3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,27 +1552,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SpySnippetsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="283">
+          <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#1545#1553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="174" column="48" selection-start-line="174" selection-start-column="48" selection-end-line="174" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/SpySnippets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="199">
+          <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1394,7 +1642,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
