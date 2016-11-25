@@ -1,3 +1,5 @@
+package level3;
+
 import level3.SpySnippets;
 import org.junit.Test;
 

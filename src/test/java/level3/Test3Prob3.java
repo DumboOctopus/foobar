@@ -1,3 +1,4 @@
+package level3;
 
 import level3.Level3Prob3;
 import org.junit.Ignore;
@@ -147,7 +148,7 @@ public class Test3Prob3 {
         String out = Level3Prob3.eliminateCombine(alpha);
         System.out.println(out);
     }
-//    @Test
+//    @level3.BruteMinion
 //    public void testMerge1()
 //    {
 //        String[] alphabets = new String[]{"eca", "ac"};
@@ -155,7 +156,7 @@ public class Test3Prob3 {
 //        assertEquals("eac", answer);
 //    }
 //
-//    @Test
+//    @level3.BruteMinion
 //    public void testMerge2()
 //    {
 //        ArrayList<String> alphabets = new ArrayList<>();
