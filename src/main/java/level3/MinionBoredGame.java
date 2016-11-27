@@ -151,7 +151,7 @@ public class MinionBoredGame {
         int out = 0;
 
         //max is when all are RRRRR and the rest are S -1.
-        while(s <= t-n+1 && r >= n-1){
+        while(s <= t-n+1 && r >= n-1 && l > 0){
 
             out += permWithRepeats(t,r,l,s)%123454321;
 
@@ -171,13 +171,7 @@ public class MinionBoredGame {
 
             s+=2;
             l--;
-            if(l <0 ) {
-                r -= 2;
-                l=0;
-            }else {
-                r--;
-
-            }
+            r--;
         }
 
         return out%123454321;

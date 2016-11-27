@@ -138,7 +138,7 @@ public class MinionBoredGameTest {
     @Ignore
     @Test
     public void testRRLLSSshell5(){
-        for (int n = 3; n < 50; n++) {
+        for (int n = 3; n < 15; n++) {
             for(int t = n + 2; t < n+10; t++)
                 assertEquals(BruteMinion.bruteRRLLSS(t, n), MinionBoredGame.rrllssShell(t, n));
         }
