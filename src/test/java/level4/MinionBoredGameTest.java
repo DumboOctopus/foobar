@@ -135,13 +135,28 @@ public class MinionBoredGameTest {
         assertEquals(77, ans);
     }
 
+    @Test
+    public void testrrllssShell4()
+    {
+        BruteMinion.showWork = true;
+        int ans = MinionBoredGame.rrllssShell(5,  3); //RRRLS
+        assertEquals(BruteMinion.bruteRRLLSS(5, 3), ans);
+    }
+
     @Ignore
     @Test
     public void testRRLLSSshell5(){
         for (int n = 3; n < 15; n++) {
             for(int t = n + 2; t < n+10; t++)
-                assertEquals(BruteMinion.bruteRRLLSS(t, n), MinionBoredGame.rrllssShell(t, n));
+                assertEquals(BruteMinion.bruteRRLLSS(t, n) +"t:"+t+"n:"+n, MinionBoredGame.rrllssShell(t, n)+"t:"+t+"n:"+n);
         }
+    }
+
+    @Test
+    public void testRRLLSSShell7()
+    {
+        int ans = MinionBoredGame.rrllssShell(300,  100); //RRRLS
+        System.out.println(ans);
     }
 
 

@@ -1,9 +1,6 @@
 package level4;
 
-import java.lang.reflect.Array;
-import java.nio.channels.Pipe;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -71,7 +68,7 @@ public class BruteMinion {
 
         Set<String> all = new HashSet<>();
 
-        while(s <= t-n+1 && r >= n-1){
+        while(s <= t-n+1 && r >= n-1 && s >0 && l > 0){
 
             String base = "";
             for (int i = 0; i < s; i++) {

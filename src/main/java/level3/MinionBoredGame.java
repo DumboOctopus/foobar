@@ -144,7 +144,7 @@ public class MinionBoredGame {
     public static int rrllssShell(int t, int n)
     {
         int s = 2-t%2;
-        int l = (t-n+1-s)/2;
+        int l = (t-n+1-s)/2; //check this!!!!! it can be integer division issues....
         int r = t-l-s;
 
 
