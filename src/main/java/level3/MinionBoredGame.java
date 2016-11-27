@@ -1,5 +1,7 @@
 package level3;
 
+import java.math.BigInteger;
+
 /**
  * Created by neilprajapati on 11/24/16.
  * neilprajapati, dont forget to javaDoc this file.
@@ -68,42 +70,44 @@ public class MinionBoredGame {
      *
      *
      */
+    private static final BigInteger MODULUS = new BigInteger("123454321");
+
     public static int answer(int t, int n) {
         if(n==2) return t;
 
-        int output = rrrrShell();
+        BigInteger output = rrrrShell();
         if(t >= n)
-            output +=rrssShell(t, n);
+            output =output.add(rrssShell(t, n));
 
         if(t >= n+1)
-            output += rrllShell(t, n);
+            output = output.add(rrllShell(t, n));
 
         if(t >= n+2)
-            output += rrllssShell(t, n);
+            output =output.add( rrllssShell(t, n));
 
-        return output % 123454321;
+        return output.mod(MODULUS).intValue();
     }
     //==================SHELL CALCULATIONS=================//
-    public static int rrrrShell()
+    public static BigInteger rrrrShell()
     {
-        return 1;
+        return BigInteger.ONE;
     }
 
-    public static int rrssShell(int t, int n)
+    public static BigInteger rrssShell(int t, int n)
     {
         //efficiency is not much of a concern here.
-        return (int) (permWithRepeats(t, t-n+1, n-1, 0)%123454321);
+        return permWithRepeats(t, t-n+1, n-1, 0).mod(MODULUS);
     }
 
-    public static int rrllShell(int t, int n)
+    public static BigInteger rrllShell(int t, int n)
     {
         //if its impossible
-        if((t-n+1)%2 == 1) return 0;
+        if((t-n+1)%2 == 1) return new BigInteger("0");
 
         int l = (t-n+1)/2;
         int r = t-l;
 
-        int out = (int) (permWithRepeats(t,r,l,0)%123454321);
+        BigInteger out = permWithRepeats(t,r,l,0).mod(MODULUS);
 //        if(l >= 3)
 //            out -= permWithRepeats(t-3,r,l-3,0)*(
 //                    3*(t-1)*(t-2)/((l-1)*(l-2))-3*(t-2)/(l-2) + 1
@@ -115,52 +119,51 @@ public class MinionBoredGame {
 //        else if(l==1)
 //            out -= 3*permWithRepeats(t-1,r,l-1,0)%123454321;
 
-        int intersections = 0;
+        BigInteger intersections = new BigInteger("0");
         if(t >= 1 && l >= 1 && r >= 0)
             if(l-1 > r)
-                intersections += 3*permWithRepeats(t-1, l-1, r,0)%123454321;
+                intersections = intersections.add(permWithRepeats(t-1, l-1, r,0).multiply(new BigInteger("3")).mod(MODULUS));
             else
-                intersections += 3*permWithRepeats(t-1, r, l-1,0)%123454321;
+                intersections = intersections.add(permWithRepeats(t-1, r, l-1,0).multiply(new BigInteger("3")).mod(MODULUS));
         if(t >= 2 && l>=2 && r >= 0)
             if(l-2 > r)
-                intersections += -3*permWithRepeats(t-2, l-2, r,0)%123454321;
+                intersections = intersections.add(permWithRepeats(t-2, l-2, r,0).multiply(new BigInteger("-3")).mod(MODULUS));
             else
-                intersections += -3*permWithRepeats(t-2, r, l-2,0)%123454321;
+                intersections = intersections.add(permWithRepeats(t-2, r, l-2, 0).multiply(new BigInteger("-3")).mod(MODULUS));
         if(t >= 3 && l >= 3 && r >= 0)
             if(l-3 > r)
-                intersections += permWithRepeats(t-3, l-3, r,0)%123454321;
+                intersections = intersections.add(permWithRepeats(t-3, l-3, r,0).mod(MODULUS));
             else
-                intersections += permWithRepeats(t-3, r, l-3,0)%123454321;
-        out-= intersections%123454321;
+                intersections =intersections.add(permWithRepeats(t-3, r ,l-3, 0).mod(MODULUS));
+        out =out.subtract( intersections.mod(MODULUS) ) ;
 
-        System.out.println(3*permWithRepeats(t-1, l-1, r,0)%123454321);
-        System.out.println(3*permWithRepeats(t-2, l-2, r,0)%123454321);
-        System.out.println(permWithRepeats(t-3, l-3, r,0)%123454321);
-
-        return out%123454321;
+        return out.mod(MODULUS);
     }
 
 
-    public static int rrllssShell(int t, int n)
+    public static BigInteger rrllssShell(int t, int n)
     {
         int s = 2-t%2;
         int l = (t-n+1-s)/2;
         int r = t-l-s;
 
 
-        int out = 0;
+        BigInteger out = new BigInteger("0");
 
         //max is when all are RRRRR and the rest are S -1.
         while(s <= t-n+1 && r >= n-1){
 
-            out += permWithRepeats(t,r,l,s)%123454321;
+            out = out.add( permWithRepeats(t,r,l,s).mod(MODULUS));
 
 
-            int sPossibilities = (int) (permWithRepeats(s+l+r,l+r,s,0)%123454321);
+            BigInteger sPossibilities =  (permWithRepeats(s+l+r,l+r,s,0).mod(MODULUS));
             if(l >= 3)
-                out -= sPossibilities*permWithRepeats(t-3-s,r,l-3,0)*(
-                        3*(t-1-s)*(t-2-s)/(l-1)/(l-2)-3*(t-2-s)/(l-2) + 1
-                )%123454321;
+                out = out.subtract(
+                        sPossibilities.multiply(permWithRepeats(t-3-s,r,l-3,0)).multiply(
+                                new BigInteger((3*(t-1-s)*(t-2-s)/(l-1)/(l-2)-3*(t-2-s)/(l-2) + 1)+ "")
+                        ).mod(MODULUS)
+                );
+            /*
             else if(l == 2)
                 out -= 3*sPossibilities*permWithRepeats(t-2-s,r,l-2,0)*(
                         (t-1-s)/(l-1)-1
@@ -168,7 +171,7 @@ public class MinionBoredGame {
             else if(l == 1)
                 out -= 3*sPossibilities*permWithRepeats(t-1-s,r,l-1,0)%123454321; //-s asdjasdjlksd
             //if l ==0 there are no degenerate l cases :D
-
+            */
             s+=2;
             l--;
             if(l <0 ) {
@@ -180,7 +183,7 @@ public class MinionBoredGame {
             }
         }
 
-        return out%123454321;
+        return out.mod(MODULUS);
     }
 
 
@@ -196,18 +199,18 @@ public class MinionBoredGame {
      * @param d2 second denomenintor
      * @param d3 second denomenintor
      */
-    public static long permWithRepeats(int t, int dMax, int d2, int d3)
+    public static BigInteger permWithRepeats(int t, int dMax, int d2, int d3)
     {
-        long out = 1;
+        BigInteger out = new BigInteger("1");
 
         for(int i = dMax + 1; i <= t; i++)
-            out *= i;
+            out =out.multiply(new BigInteger(i + "")) ;
 
         for(int i = d2; i > 1; i--)
-            out /= i;
+            out = out.divide(new BigInteger(i + ""));
 
         for(int i = d3; i > 1; i--)
-            out /= i;
+            out = out.divide(new BigInteger(i + ""));
 
         return out;
     }
