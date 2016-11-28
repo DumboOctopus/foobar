@@ -3,9 +3,11 @@ package level3;
 import java.math.BigInteger;
 
 /**
- * Created by neilprajapati on 11/24/16.
- * neilprajapati, dont forget to javaDoc this file.
+ * where i left off:
+ *
+ *  REDO THE MATH FOR RLS SHELL!!!!!!!!!! SERIOUSLLY ITLL SAVE TIME>
  */
+
 public class MinionBoredGame {
 
     /**
@@ -53,6 +55,7 @@ public class MinionBoredGame {
      *
      *          in order for their to be no spaces num(R)-num(L) = n-1
      *          in order to be valid num(R)+num(L)=t
+     *          also, it cant be like RRLLL where the number of L is more than the number of R.
      *          System equation yeilds: num(R) = (n-1)/2. num(L) = (1-n+t)/2
      *              Implies that not all systems with high enough values have a valid RLRL shell
      *  RRLRLRSS Shell(special condition can't go L after on last peice):
@@ -75,7 +78,7 @@ public class MinionBoredGame {
     public static int answer(int t, int n) {
         if(n==2) return t;
 
-        BigInteger output = rrrrShell();
+        BigInteger output = rrrrShell(t,n);
         if(t >= n)
             output =output.add(rrssShell(t, n));
 
@@ -88,9 +91,11 @@ public class MinionBoredGame {
         return output.mod(MODULUS).intValue();
     }
     //==================SHELL CALCULATIONS=================//
-    public static BigInteger rrrrShell()
+    public static BigInteger rrrrShell(int t, int n)
     {
-        return BigInteger.ONE;
+        if(t == n-1)
+            return BigInteger.ONE;
+        return BigInteger.ZERO;
     }
 
     public static BigInteger rrssShell(int t, int n)
@@ -143,15 +148,17 @@ public class MinionBoredGame {
 
     public static BigInteger rrllssShell(int t, int n)
     {
-        int s = 2-t%2;
-        int l = (t-n+1-s)/2;
+
+        int s = 1+(t+n)%2;
+        int l = (t-n+1-s)/2; //check this!!!
         int r = t-l-s;
 
+        System.out.println("r = " + r+"l = " + l+"s = " + s + "t = " + t + "n = " +n) ;
 
         BigInteger out = new BigInteger("0");
 
         //max is when all are RRRRR and the rest are S -1.
-        while(s <= t-n+1 && r >= n-1){
+        while(r >= n-1 && l > 0 && s > 0){
 
             out = out.add( permWithRepeats(t,r,l,s).mod(MODULUS));
 
@@ -163,24 +170,20 @@ public class MinionBoredGame {
                                 new BigInteger((3*(t-1-s)*(t-2-s)/(l-1)/(l-2)-3*(t-2-s)/(l-2) + 1)+ "")
                         ).mod(MODULUS)
                 );
-            /*
+
             else if(l == 2)
-                out -= 3*sPossibilities*permWithRepeats(t-2-s,r,l-2,0)*(
-                        (t-1-s)/(l-1)-1
-                )%123454321;
+                out = out.subtract( (new BigInteger("3")).multiply(sPossibilities).multiply(permWithRepeats(t-2-s,r,l-2,0)).multiply(
+                        new BigInteger(
+                                ((t-1-s)/(l-1)-1) + ""
+                        )
+                ).mod(MODULUS));
             else if(l == 1)
-                out -= 3*sPossibilities*permWithRepeats(t-1-s,r,l-1,0)%123454321; //-s asdjasdjlksd
+                out = out.subtract( (new BigInteger("3")).multiply(sPossibilities).multiply(permWithRepeats(t-1-s,r,l-1,0)).mod(MODULUS) ); //-s asdjasdjlksd
             //if l ==0 there are no degenerate l cases :D
-            */
+
             s+=2;
             l--;
-            if(l <0 ) {
-                r -= 2;
-                l=0;
-            }else {
-                r--;
-
-            }
+            r--;
         }
 
         return out.mod(MODULUS);
@@ -201,7 +204,7 @@ public class MinionBoredGame {
      */
     public static BigInteger permWithRepeats(int t, int dMax, int d2, int d3)
     {
-        BigInteger out = new BigInteger("1");
+        BigInteger out = BigInteger.ONE;
 
         for(int i = dMax + 1; i <= t; i++)
             out =out.multiply(new BigInteger(i + "")) ;
