@@ -175,7 +175,7 @@ public class MinionBoredGameTest {
         int n = 6, t = 10;
         System.out.println(MinionBoredGame.rrssShell(t, n));
         BruteMinion.showWork = true;
-        System.out.println(BruteMinion.bruteRRLLSS(t, n));
+        System.out.println(BruteMinion2.rrllssShell(t, n));
 
         //RRRRR RLRLS
         //RRRRR RLSSS

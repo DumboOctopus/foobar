@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e497d36-04c4-4aef-af87-db9301d927bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/MinionBoredGame.class" afterPath="$PROJECT_DIR$/out/production/Google FOOOBAR/level3/MinionBoredGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Google FOOOBAR/level4/BruteMinion.class" afterPath="$PROJECT_DIR$/out/test/Google FOOOBAR/level4/BruteMinion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Google FOOOBAR/level4/MinionBoredGameTest.class" afterPath="$PROJECT_DIR$/out/test/Google FOOOBAR/level4/MinionBoredGameTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/level4/BruteMinion2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" afterPath="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" afterPath="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" afterPath="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" />
     </list>
     <ignored path="Google FOOOBAR.iws" />
@@ -51,8 +46,8 @@
       <file leaf-file-name="MinionBoredGameTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2595">
-              <caret line="176" column="36" selection-start-line="176" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,19 +58,31 @@
       <file leaf-file-name="MinionBoredGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="57" column="95" selection-start-line="57" selection-start-column="95" selection-end-line="57" selection-end-column="95" />
+            <state relative-caret-position="660">
+              <caret line="204" column="4" selection-start-line="204" selection-start-column="4" selection-end-line="218" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BruteMinion.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BruteMinion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
+            <state relative-caret-position="66">
+              <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="94" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BruteMinion2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="76" column="78" selection-start-line="76" selection-start-column="78" selection-end-line="76" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +90,7 @@
       <file leaf-file-name="test" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/test">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="9210">
               <caret line="614" column="10" selection-start-line="614" selection-start-column="6" selection-end-line="614" selection-end-column="10" />
               <folding />
             </state>
@@ -130,10 +137,11 @@
         <option value="$PROJECT_DIR$/src/test/java/BruteMinion.java" />
         <option value="$PROJECT_DIR$/src/test/java/MinionBoredGameTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/level3/MinionBoredGameTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" />
         <option value="$PROJECT_DIR$/src/main/resources/test" />
-        <option value="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level4/BruteMinion.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/level4/BruteMinion2.java" />
       </list>
     </option>
   </component>
@@ -314,8 +322,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,7 +344,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MinionBoredGameTest.testrrllssShell1">
+  <component name="RunManager" selected="JUnit.MinionBoredGameTest.officialFoobarTest4">
     <configuration default="false" name="MinionBoredGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -821,8 +829,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllssShell1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.officialFoobarTest4" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.officialFoobarTest4" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllssShell1" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.lol" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.MinionBoredGameTest.testrrllssShel4" />
@@ -924,18 +932,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 02m 25s.xml">
-      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 02m 30s.xml">
-      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 03m 00s.xml">
-      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 08m 04s.xml">
-      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 08m 34s.xml">
       <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
     </history-entry>
@@ -949,6 +945,18 @@
       <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.27 at 18h 17m 46s.xml">
+      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.28 at 16h 27m 17s.xml">
+      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.28 at 16h 31m 11s.xml">
+      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.28 at 16h 35m 16s.xml">
+      <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MinionBoredGameTest_officialFoobarTest4 - 2016.11.28 at 16h 35m 24s.xml">
       <configuration name="MinionBoredGameTest.officialFoobarTest4" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MinionBoredGameTest_testrrllssShell1 - 2016.11.27 at 18h 23m 27s.xml">
@@ -970,11 +978,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.50472915" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.49699053" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32252836" sideWeight="0.49527085" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -983,14 +993,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40032414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932073" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1037,8 +1045,14 @@
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/level4/BruteMinion2.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1051,13 +1065,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/level3/Level3Prob3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2355">
@@ -1372,10 +1379,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9210">
+          <caret line="614" column="10" selection-start-line="614" selection-start-column="6" selection-end-line="614" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/level4/MinionBoredGameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2595">
-          <caret line="176" column="36" selection-start-line="176" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1384,25 +1407,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/level3/MinionBoredGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="57" column="95" selection-start-line="57" selection-start-column="95" selection-end-line="57" selection-end-column="95" />
+        <state relative-caret-position="660">
+          <caret line="204" column="4" selection-start-line="204" selection-start-column="4" selection-end-line="218" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test">
+    <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="614" column="10" selection-start-line="614" selection-start-column="6" selection-end-line="614" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/level4/BruteMinion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="163" column="5" selection-start-line="163" selection-start-column="5" selection-end-line="163" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="313">
+          <caret line="76" column="78" selection-start-line="76" selection-start-column="78" selection-end-line="76" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
