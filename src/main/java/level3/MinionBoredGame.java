@@ -72,6 +72,35 @@ public class MinionBoredGame {
      *
      *
      *
+     * RL case revisited:
+     *
+     * //l1: 3
+     //L...   ...L   ...LR
+
+
+     //1 new beginning, 1 new end
+     //l2: 5
+     //L...   ...L   ...LR   RLL... ...LLRR
+
+
+     //2 new beginning, 2 new end
+     //l3: 9
+     //L...   ...L   ...LR   RLL... ...LLRR    RLRLL...    RRLLL...   ...LLLRRR   ...LLRLRR
+
+
+     //5 new beginning, 5 new end
+     //l4: 19
+     //[l3]   RRRLLLL... RRLRLLL... RLRRLLL... RLRLRLL...  RRLLRLL ...LLLLRRRR ...LRLLLRRR  ...LLRLLRRR  ...LLLRLRRR ...LLLRRLRR
+
+
+     //p0 = 1
+     //p1 = 1
+     //p2 = 2
+     //p3 = 5
+     // pc = c!/r!/l! - p0(c-1)!/(l-1)!/r! - p1(c-3)!/(l-2)!/(r-1)! - p2(c-5)!/(l-3)!/(r-2)! - p3(c-7)!/(l-4)!/(r-3)! - ...
+
+     WTF p seems like the fibanocci sequence!!!!!!!!!
+     *
      */
     private static final BigInteger MODULUS = new BigInteger("123454321");
 

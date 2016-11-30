@@ -82,7 +82,7 @@ public class MinionBoredGameTest {
         int t=8, n=3;
         int ans = MinionBoredGame.rrllShell(t, n).intValue(); //RRRRLRL
         BruteMinion.showWork = true;
-        assertEquals(BruteMinion.bruteRRLL(t, n), ans);
+        assertEquals(BruteMinion2.rrllShell(t, n), ans);
     }
 
     @Test
@@ -91,7 +91,7 @@ public class MinionBoredGameTest {
         int t=12, n=3;
         int ans = MinionBoredGame.rrllShell(t, n).intValue(); //RRRRLRL
         BruteMinion.showWork = true;
-        assertEquals(BruteMinion.bruteRRLL(t, n), ans); //126
+        assertEquals(BruteMinion2.rrllShell(t, n), ans); //126
     }
 
     @Test
@@ -100,7 +100,7 @@ public class MinionBoredGameTest {
         int t=15, n=6;
         int ans = MinionBoredGame.rrllShell(t, n).intValue(); //RRRRLRL
         BruteMinion.showWork = true;
-        assertEquals(BruteMinion.bruteRRLL(t, n), ans); //792
+        assertEquals(BruteMinion2.rrllShell(t, n), ans); //792
     }
 
     @Ignore
@@ -108,7 +108,7 @@ public class MinionBoredGameTest {
     public void testrrllShellMany(){
         for (int n = 3; n < 50; n++) {
             for(int t = n + 1; t < n+10; t++)
-                assertEquals(BruteMinion.bruteRRLL(t, n)+"t:"+t+"n:"+n, MinionBoredGame.rrllShell(t, n)+"t:"+t+"n:"+n);
+                assertEquals(BruteMinion2.rrllShell(t, n)+"t:"+t+"n:"+n, MinionBoredGame.rrllShell(t, n)+"t:"+t+"n:"+n);
         }
     }
 
@@ -173,14 +173,43 @@ public class MinionBoredGameTest {
     @Test
     public void officialFoobarTest4(){
         int n = 6, t = 10;
-        System.out.println(MinionBoredGame.rrssShell(t, n));
-        BruteMinion.showWork = true;
-        System.out.println(BruteMinion2.rrllssShell(t, n));
+        assertEquals(BruteMinion2.rrllssShell(t,n), MinionBoredGame.rrllssShell(t,n).intValue());
+    }
 
-        //RRRRR RLRLS
-        //RRRRR RLSSS
-        //RRRRR SSSSS
+    @Test
+    public void test()
+    {
+        System.out.println(BruteMinion2.rrllShell(11,4));
+        System.out.println(BruteMinion.bruteRRLL(11, 4));
+
+        int n = 4;
+        for (int t = 5; t < 12; t+=2) {
+            System.out.println(BruteMinion.bruteRRLLDegens(t, n)+ ", l" + (t-n+1)/2);
+        }
+
+        //l1: 3
+        //L...   ...L   ...LR
 
 
+        //1 new beginning, 1 new end
+        //l2: 5
+        //L...   ...L   ...LR   RLL... ...LLRR
+
+
+        //2 new beginning, 2 new end
+        //l3: 9
+        //L...   ...L   ...LR   RLL... ...LLRR    RLRLL...    RRLLL...   ...LLLRRR   ...LLRLRR
+
+
+        //5 new beginning, 5 new end
+        //l4: 19
+        //[l3]   RRRLLLL... RRLRLLL... RLRRLLL... RLRLRLL...  RRLLRLL ...LLLLRRRR ...LRLLLRRR  ...LLRLLRRR  ...LLLRLRRR ...LLLRRLRR
+
+
+        //p0 = 1
+        //p1 = 1
+        //p2 = 2
+        //p3 = 5
+        // pc = c!/r!/l! - p0(c-1)!/(l-1)!/r! - p1(c-3)!/(l-2)!/(r-1)! - p2(c-5)!/(l-3)!/(r-2)! - p3(c-7)!/(l-4)!/(r-3)! - ...
     }
 }
