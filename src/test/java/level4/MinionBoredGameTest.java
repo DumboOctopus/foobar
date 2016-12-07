@@ -6,6 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 
+import java.math.BigInteger;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -177,13 +178,19 @@ public class MinionBoredGameTest {
     }
 
     @Test
+    public void officialFoobarTest5(){
+        int n = 501, t = 1000;
+        assertEquals(BruteMinion2.rrllShell(t,n), MinionBoredGame.rrllssShell(t,n).intValue());
+    }
+
+    @Test
     public void test()
     {
         System.out.println(BruteMinion2.rrllShell(11,4));
         System.out.println(BruteMinion.bruteRRLL(11, 4));
 
         int n = 4;
-        for (int t = 5; t < 12; t+=2) {
+        for (int t = 5; t < 20; t+=2) {
             System.out.println(BruteMinion.bruteRRLLDegens(t, n)+ ", l" + (t-n+1)/2);
         }
 
@@ -206,10 +213,65 @@ public class MinionBoredGameTest {
         //[l3]   RRRLLLL... RRLRLLL... RLRRLLL... RLRLRLL...  RRLLRLL ...LLLLRRRR ...LRLLLRRR  ...LLRLLRRR  ...LLLRLRRR ...LLLRRLRR
 
 
-        //p0 = 1
-        //p1 = 1
-        //p2 = 2
-        //p3 = 5
-        // pc = c!/r!/l! - p0(c-1)!/(l-1)!/r! - p1(c-3)!/(l-2)!/(r-1)! - p2(c-5)!/(l-3)!/(r-2)! - p3(c-7)!/(l-4)!/(r-3)! - ...
+        //l at max can be 250
+        //RRRRLLLLL
+
+        //p2 = 1
+        //p3 = 2
+        //p4 = 5
+        //p5 = 14
+        //p6 = 42
+        // pc = c!/r!/l! - 5(c-1)!/(l-1)!/r! - 2(c-3)!/(l-2)!/(r-1)! - (c-5)!/(l-3)!/(r-2)! - (c-7)!/(l-4)!/(r-3)! - ...
+
+    }
+
+    @Test
+    public void t()
+    {
+        System.out.println(
+                pc(6)
+        );
+    }
+
+    public static int pc(int originalL) {
+        int l = originalL; //number of non fixed l
+        int r = l; //number of non fixed r
+        int c = r + l; //number of mutatable things
+
+        int out = permWithRepeats(c, r, l, 0);
+        c--;
+        l--;
+        out -= permWithRepeats(c, r, l, 0);
+        c--;
+        r--;
+        out -= permWithRepeats(c, r, l, 0);
+
+        l--;r--;c -= 2;
+
+        int[] p = {1, 1, 1, 2, 5, 14};
+        while (l >= 0 && c > 0 && r >= 0){
+            int fixedLs = originalL - l;
+            out -= p[fixedLs] * permWithRepeats(c, r, l, 0);
+            l--;r--;c -= 2;
+        }
+
+        return out;
+    }
+
+
+    public static int permWithRepeats(int t, int dMax, int d2, int d3)
+    {
+        BigInteger out = BigInteger.ONE;
+
+        for(int i = dMax + 1; i <= t; i++)
+            out =out.multiply(new BigInteger(i + "")) ;
+
+        for(int i = d2; i > 1; i--)
+            out = out.divide(new BigInteger(i + ""));
+
+        for(int i = d3; i > 1; i--)
+            out = out.divide(new BigInteger(i + ""));
+
+        return out.intValue();
     }
 }
