@@ -174,6 +174,7 @@ public class MinionBoredGameTest {
     @Test
     public void officialFoobarTest4(){
         int n = 6, t = 10;
+        assertEquals(BruteMinion2.rrllShell(t,n), MinionBoredGame.rrllShell(t,n).intValue());
         assertEquals(BruteMinion2.rrllssShell(t,n), MinionBoredGame.rrllssShell(t,n).intValue());
     }
 
@@ -188,11 +189,7 @@ public class MinionBoredGameTest {
     {
         System.out.println(BruteMinion2.rrllShell(11,4));
         System.out.println(BruteMinion.bruteRRLL(11, 4));
-
-        int n = 4;
-        for (int t = 5; t < 20; t+=2) {
-            System.out.println(BruteMinion.bruteRRLLDegens(t, n)+ ", l" + (t-n+1)/2);
-        }
+        System.out.println(MinionBoredGame.rrllShellHelper(5,1,4)); //n=4,t=5
 
         //l1: 3
         //L...   ...L   ...LR

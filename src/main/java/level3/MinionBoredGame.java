@@ -199,76 +199,86 @@ public class MinionBoredGame {
         int l = (t-n+1)/2;
         int r = t-l;
 
-        BigInteger out = permWithRepeats(t,r,l,0).mod(MODULUS);
-//        if(l >= 3)
-//            out -= permWithRepeats(t-3,r,l-3,0)*(
-//                    3*(t-1)*(t-2)/((l-1)*(l-2))-3*(t-2)/(l-2) + 1
-//            )%123454321;
-//        else if(l == 2)
-//            out -= 3*permWithRepeats(t-2,r,l-2,0)*(
-//                    (t-1)/(l-1)-1
-//            )%123454321;
-//        else if(l==1)
-//            out -= 3*permWithRepeats(t-1,r,l-1,0)%123454321;
 
-        BigInteger intersections = new BigInteger("0");
-        if(t >= 1 && l >= 1 && r >= 0)
-            if(l-1 > r)
-                intersections = intersections.add(permWithRepeats(t-1, l-1, r,0).multiply(new BigInteger("3")).mod(MODULUS));
-            else
-                intersections = intersections.add(permWithRepeats(t-1, r, l-1,0).multiply(new BigInteger("3")).mod(MODULUS));
-        if(t >= 2 && l>=2 && r >= 0)
-            if(l-2 > r)
-                intersections = intersections.add(permWithRepeats(t-2, l-2, r,0).multiply(new BigInteger("-3")).mod(MODULUS));
-            else
-                intersections = intersections.add(permWithRepeats(t-2, r, l-2, 0).multiply(new BigInteger("-3")).mod(MODULUS));
-        if(t >= 3 && l >= 3 && r >= 0)
-            if(l-3 > r)
-                intersections = intersections.add(permWithRepeats(t-3, l-3, r,0).mod(MODULUS));
-            else
-                intersections =intersections.add(permWithRepeats(t-3, r ,l-3, 0).mod(MODULUS));
-        out =out.subtract( intersections.mod(MODULUS) ) ;
-
-        return out.mod(MODULUS);
+        return rrllShellHelper(t, l, r);
     }
 
 
-    public static BigInteger rrllShellHelper(int t, int l, int r)
+    public static BigInteger rrllShellHelper(int tInitial, int lIntial, int rIntial)
     {
-        BigInteger out = permWithRepeats(t, r, l, 0);
+        BigInteger out = permWithRepeats(tInitial, rIntial, lIntial);
         BigInteger degens = BigInteger.ZERO;
 
         //l = 1 cases
-        degens = degens.add(permWithRepeats(t,r,l-1,0).multiply(BigInteger.valueOf(2)));//L... ...L
-        degens = degens.add(permWithRepeats(t, r-1, l-1, 0)); //...LR
+        degens = degens.add(permWithRepeats(tInitial-1,rIntial,lIntial-1,0).multiply(BigInteger.valueOf(2)));//L... ...L
+        degens = degens.add(permWithRepeats(tInitial-2, rIntial-1, lIntial-1, 0)); //...LR
 
-        for (int i = 2; i <= l ; i++) {
-            int p = getP(l);
+        //add up all degenerate sets
+        for (int l = 2; l <= lIntial ; l++) {
+            //beginning degen cases
+            degens = degens.add(permWithRepeats(tInitial - (l-1+l),rIntial-l+1, lIntial- l).multiply(pValues[l]));
+            //end degen cases
+            degens = degens.add(permWithRepeats(tInitial-2*l,rIntial- l,lIntial- l).multiply(pValues[l]));
         }
 
-//        if(t >= 1 && l >= 1 && r >= 0)
-//            if(l-1 > r)
-//                degens = degens.add(permWithRepeats(t-1, l-1, r,0).multiply(new BigInteger("3")).mod(MODULUS));
-//            else
-//                degens = degens.add(permWithRepeats(t-1, r, l-1,0).multiply(new BigInteger("3")).mod(MODULUS));
-//        if(t >= 2 && l>=2 && r >= 0)
-//            if(l-2 > r)
-//                degens = degens.add(permWithRepeats(t-2, l-2, r,0).multiply(new BigInteger("-3")).mod(MODULUS));
-//            else
-//                degens = degens.add(permWithRepeats(t-2, r, l-2, 0).multiply(new BigInteger("-3")).mod(MODULUS));
-//        if(t >= 3 && l >= 3 && r >= 0)
-//            if(l-3 > r)
-//                degens = degens.add(permWithRepeats(t-3, l-3, r,0).mod(MODULUS));
-//            else
-//                degens =degens.add(permWithRepeats(t-3, r ,l-3, 0).mod(MODULUS));
-//        out =out.subtract( out.mod(MODULUS) ) ;
-//
 
+        //subtract all unions between beginnings and ends
+        //L...L
+        //L...Rl
+        //Beg...LR
+        //beg...L
+        //L...End
+        //beg..end
+
+        //subtract L... union ...L
+        if(tInitial -2 >= 0 && lIntial-2>= 0)
+            degens = degens.subtract(permWithRepeats(tInitial-2, rIntial, lIntial-2,0));
+        if(tInitial-3 >=0 && lIntial-3 >= 0)
+            degens = degens.subtract(permWithRepeats(tInitial-3, rIntial-1, lIntial-3,0));
+
+        //RLLRRL
+        //subtract all beginning case union ...L and ....LR
+
+        for (int l = 2; l < lIntial; l++) {
+            //...L
+
+            degens = degens.subtract(permWithRepeats(tInitial-2*l, rIntial-l+1,lIntial- l-1).multiply(pValues[l]));
+            //...LR
+            degens = degens.subtract(permWithRepeats(tInitial-2*l-1 ,rIntial-l,lIntial-l-1).multiply(pValues[l]));
+        }
+        //lInit -l-1>=0
+        //lInit -1 >= l
+
+        //subtract end cases union L...
+        //l=3
+        //r=5
+        //
+        for (int l = 2; l < lIntial; l++) {
+            degens = degens.subtract(permWithRepeats(tInitial-2*l-1,rIntial-l ,lIntial-l-1).multiply(pValues[l]));
+        }
+
+        //subtract general end cases union beginning cases
+        for (int l1 = 2; l1 <= lIntial; l1++) { //l1 = fixed l1 in beginning case
+            for (int l2 = 2; l2 <= lIntial; l2++) { //l2 = fixed l in end case
+                int fixedL = l1 + l2;
+                int fixedR = l1 -1+l2;
+
+                if(tInitial-fixedL-fixedR>=0 && rIntial- fixedR>=0 &&  lIntial - fixedL>= 0)
+                    degens = degens.subtract(
+                            permWithRepeats(tInitial-fixedL-fixedR, rIntial- fixedR, lIntial - fixedL)
+                                    .multiply(pValues[l1])
+                                    .multiply(pValues[l2])
+                    );
+            }
+        }
+
+        System.out.println(out);
+        System.out.println(degens);
+
+        //the union of all of them is always garenteed to be 0 since u can't have 2 unique ends or 2 unique beginnings at the same time.
+
+        out = out.subtract(degens);
         return out;
-    }
-
-    private static int getP(int l) {
-        return 0;
     }
 
 
@@ -279,8 +289,6 @@ public class MinionBoredGame {
         int l = (t-n+1-s)/2; //check this!!!
         int r = t-l-s;
 
-        System.out.println("r = " + r+"l = " + l+"s = " + s + "t = " + t + "n = " +n) ;
-
         BigInteger out = new BigInteger("0");
 
         //max is when all are RRRRR and the rest are S -1.
@@ -290,22 +298,10 @@ public class MinionBoredGame {
 
 
             BigInteger sPossibilities =  (permWithRepeats(s+l+r,l+r,s,0).mod(MODULUS));
-            if(l >= 3)
-                out = out.subtract(
-                        sPossibilities.multiply(permWithRepeats(t-3-s,r,l-3,0)).multiply(
-                                new BigInteger((3*(t-1-s)*(t-2-s)/(l-1)/(l-2)-3*(t-2-s)/(l-2) + 1)+ "")
-                        ).mod(MODULUS)
-                );
 
-            else if(l == 2)
-                out = out.subtract( (new BigInteger("3")).multiply(sPossibilities).multiply(permWithRepeats(t-2-s,r,l-2,0)).multiply(
-                        new BigInteger(
-                                ((t-1-s)/(l-1)-1) + ""
-                        )
-                ).mod(MODULUS));
-            else if(l == 1)
-                out = out.subtract( (new BigInteger("3")).multiply(sPossibilities).multiply(permWithRepeats(t-1-s,r,l-1,0)).mod(MODULUS) ); //-s asdjasdjlksd
-            //if l ==0 there are no degenerate l cases :D
+            out = out.add(
+                    rrllShellHelper(l+r, l, r).multiply(sPossibilities)
+            );
 
             s+=2;
             l--;
@@ -330,6 +326,8 @@ public class MinionBoredGame {
      */
     public static BigInteger permWithRepeats(int t, int dMax, int d2, int d3)
     {
+
+        if(t<0 || dMax < 0 || d2 < 0 || d3 < 0) throw new ArithmeticException("turned negative brub");
         BigInteger out = BigInteger.ONE;
 
         for(int i = dMax + 1; i <= t; i++)
@@ -344,10 +342,33 @@ public class MinionBoredGame {
         return out;
     }
 
+    /**
+     * Calculate t!/dMax!/d2!/d3!
+     * It is not necessary to supply largest denom as second argument
+     * but that is the most efficient.
+     * @param t the numerator
+     * @param dMax the largest denominator
+     * @param d2 second denomenintor
+     */
+    public static BigInteger permWithRepeats(int t, int dMax, int d2)
+    {
+        if(t<0 || dMax < 0 || d2 < 0) throw new ArithmeticException("turned negative brub");
+        BigInteger out = BigInteger.ONE;
+
+        for(int i = dMax + 1; i <= t; i++)
+            out =out.multiply(new BigInteger(i + "")) ;
+
+        for(int i = d2; i > 1; i--)
+            out = out.divide(new BigInteger(i + ""));
+
+
+        return out;
+    }
+
 
 
     //the number of new dege cases for p[l] layer where l is the number of fixed left
-    private static BigInteger[] p = {
+    private static BigInteger[] pValues = {
             new BigInteger("1"),
             new BigInteger("1"),
             new BigInteger("1"),
