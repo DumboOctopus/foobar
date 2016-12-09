@@ -1,6 +1,11 @@
 package level4;
 
+import level3.MinionBoredGame;
 
+import java.lang.reflect.Array;
+import java.nio.channels.Pipe;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -61,14 +66,14 @@ public class BruteMinion {
 
     public static int bruteRRLLSS(int t, int n)
     {
-        int s = 2-t%2;
+        int s = 1-(t+n)%2;
         int l = (t-n+1-s)/2;
         int r = t-l-s;
 
 
         Set<String> all = new HashSet<>();
 
-        while(s <= t-n+1 && r >= n-1 && s >0 && l > 0){
+        while(s <= t-n+1 && r >= n-1 && s > 0 && l > 0){
 
             String base = "";
             for (int i = 0; i < s; i++) {
@@ -85,20 +90,14 @@ public class BruteMinion {
 
             s+=2;
             l--;
-            if(l <0 ) {
-                r -= 2;
-                l=0;
-            }else {
-                r--;
-
-            }
+            r--;
         }
 
 
         int count = 0;
         for(String string: all) {
             String stub = string.replaceAll("S", "");
-            if(stub.charAt(0) != 'L' && stub.charAt(stub.length() - 1) != 'L'&& stub.charAt(stub.length() - 2) != 'L') {
+            if(stub.charAt(0) != 'L' && isValid(stub, n) && stub.charAt(stub.length() - 1) != 'L'&& stub.charAt(stub.length() - 2) != 'L') {
                 count ++;
                 if(showWork) System.out.println(string);
             }
@@ -127,30 +126,66 @@ public class BruteMinion {
         all.addAll(list);
 
 
-
         int count = 0;
-        int degen=0, degenBtwn2 = 0 , degenAll = 0;
+
         for(String string: all) {
-            if(string.charAt(0) != 'L' && string.charAt(string.length() - 1) != 'L'&& string.charAt(string.length() - 2) != 'L') {
+            if (isValid(string, n)) {
                 count ++;
-                if(showWork)
-                    System.out.println(string);
-            } else
-            {
-                degen++;
             }
-
-
-            if(string.charAt(0) == 'L' && string.charAt(string.length() - 2)== 'L') degenBtwn2 += 3;
-            if(string.charAt(0) == 'L' && string.charAt(string.length() - 1) == 'L' && string.charAt(string.length() - 2)== 'L')
-                degenAll ++;
-
         }
-
-        System.out.println("degen = " + degen);
-        System.out.println("degenBtwn2 = " + degenBtwn2);
-        System.out.println("degenAll = " + degenAll);
         return count;
     }
+
+    public static int bruteRRLLDegens(int t, int n)
+    {
+        if((t-n+1)%2 == 1) return 0;
+        int l = (t-n+1)/2;
+        int r = t-l;
+
+
+        Set<String> all = new HashSet<>();
+
+
+        String base = "";
+        for (int i = 0; i < r; i++) {
+            base += "R";
+        }
+        for (int i = 0; i < l; i++) {
+            base += "L";
+        }
+        Set<String> list = permutation(base);
+        all.addAll(list);
+
+
+        int count = 0;
+
+        for(String string: all) {
+            if(!isValid(string, n)) {
+                System.out.println(string);
+                count++;
+            }
+        }
+        System.out.println();
+        return count;
+    }
+
+
+    private static boolean isValid(String command, int n)
+    {
+        int currIndex = 0;
+        for (int i = 0; i < command.length(); i++) {
+            if(currIndex == n-1) return false;
+
+            if(command.charAt(i) == 'R')
+                currIndex ++;
+            else if(command.charAt(i) == 'L')
+                currIndex--;
+
+            if(currIndex < 0) return false;
+        }
+
+        return true;
+    }
+
 }
 
